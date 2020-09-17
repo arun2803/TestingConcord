@@ -2,6 +2,11 @@ configuration:
   arguments:
     myForm:
       lastName: Smith
+configuration:
+  dependencies:
+  - "mvn://org.python:jython-standalone:2.7.0"
+  arguments:
+    x: 2
 
 flows:
   default:
@@ -25,6 +30,8 @@ flows:
   - if: ${myForm.tosAgree}
     then:
       - log: "${myForm.firstName} says: I have agreed to the Terms and Conditions"
+  - script: example.py
+  - log: "The result: ${y}"
 
 forms:
   myForm:
