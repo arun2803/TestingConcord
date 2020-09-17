@@ -29,7 +29,7 @@ flows:
       - log: "${myForm.firstName} says: I have agreed to the Terms and Conditions"
   - set:
       x: ${myForm.age}
-      a: ${myForm.firstName
+      a: ${myForm.firstName}
       b: ${myForm.lastName}
   - call: mysubflow
     
