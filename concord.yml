@@ -27,11 +27,13 @@ flows:
   - if: ${myForm.tosAgree}
     then:
       - log: "${myForm.firstName} says: I have agreed to the Terms and Conditions"
+  - set:
+      x: ${myForm.age}
   - call: mysubflow
-    withItems: ${myForm.age}
+    
   
   mysubflow:
-  - script: example.py ${item}
+  - script: example.py
   - log: "The result: ${y}"
 
 forms:
