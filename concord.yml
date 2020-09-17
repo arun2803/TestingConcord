@@ -2,7 +2,7 @@ configuration:
   arguments:
     myForm:
       lastName: Smith
-    x: 2
+    x: ${myForm.age}
   dependencies:
   - "mvn://org.python:jython-standalone:2.7.0"
 
