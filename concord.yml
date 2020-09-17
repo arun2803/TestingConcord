@@ -2,7 +2,6 @@ configuration:
   arguments:
     myForm:
       lastName: Smith
-    x: ${myForm.age}
   dependencies:
   - "mvn://org.python:jython-standalone:2.7.0"
 
@@ -29,6 +28,8 @@ flows:
     then:
       - log: "${myForm.firstName} says: I have agreed to the Terms and Conditions"
   - script: example.py
+    arguments:
+      x: ${myForm.age}
   - log: "The result: ${y}"
 
 forms:
