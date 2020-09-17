@@ -33,7 +33,7 @@ flows:
       b: ${myForm.lastName}
       c: ${myForm.color}
       d: ${myForm.tosAgree}
-      e: ${skills}
+      e: ${myForm.skills}
   - call: mysubflow
     
   
