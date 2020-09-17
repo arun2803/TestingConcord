@@ -1,8 +1,8 @@
 configuration:
   arguments:
-    x:2
     myForm:
       lastName: Smith
+    x: 2
   dependencies:
   - "mvn://org.python:jython-standalone:2.7.0"
 
