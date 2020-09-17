@@ -31,6 +31,9 @@ flows:
       x: ${myForm.age}
       a: ${myForm.firstName}
       b: ${myForm.lastName}
+      c: ${myForm.color}
+      d: ${myForm.tosAgree}
+      e: ${skills}
   - call: mysubflow
     
   
