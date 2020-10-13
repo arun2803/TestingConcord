@@ -34,6 +34,18 @@ flows:
       c: ${myForm.color}
       d: ${myForm.tosAgree}
       e: ${myForm.skills}
+  - task:
+      in:
+        method: POST
+        request: form
+        url: "https://eda-ci.adobe.net/job/test/buildWithParameters"
+        auth:
+          basic:
+            username: arusing
+            password: Delete@123456789
+        body:
+          field1: ${myForm.firstName}
+          field2: ${myForm.lastName}
   - call: mysubflow
     
   
