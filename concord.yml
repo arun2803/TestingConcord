@@ -20,7 +20,7 @@ flows:
   - task: http
     in:
       method: GET
-      url: http://localhost:8001/api/v1/server/ping
+      url: http://ifconfig.io/
       response: json
   - log: "Response received: ${response}"
 
