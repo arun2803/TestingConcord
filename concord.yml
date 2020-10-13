@@ -7,16 +7,6 @@ configuration:
 
 flows:
   default:
-  - form: myForm
-    # form calls can override form values or provide additional data
-    values:
-      lastName: "Appleseed"
-      sum: "${1 + 2}"
-      address:
-        city: Toronto
-        province: Ontario
-        country: Canada
-
   - log: "Hello, ${myForm.firstName} ${myForm.lastName}"
   - log: "We got your file and stored it as ${myForm.aFile}"
   - log: "You have following skills"
@@ -27,7 +17,7 @@ flows:
       c: ${myForm.color}
       d: ${myForm.tosAgree}
       e: ${myForm.skills}
-  - task:
+  - task: http
       in:
         method: POST
         request: form
