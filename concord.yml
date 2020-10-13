@@ -21,7 +21,7 @@ flows:
     in:
       method: GET
       url: http://ifconfig.io/
-      response: json
+      response: string
   - log: "Response received: ${response}"
 
 forms:
