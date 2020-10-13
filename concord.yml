@@ -7,6 +7,7 @@ configuration:
 
 flows:
   default:
+  - form: myForm
   - log: "Hello, ${myForm.firstName} ${myForm.lastName}"
   - log: "We got your file and stored it as ${myForm.aFile}"
   - log: "You have following skills"
