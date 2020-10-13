@@ -27,6 +27,8 @@ flows:
       request: form
       method: POST
       url: https://eda-ci.adobe.net/job/test/buildWithParameters
+      body:
+        field1: "test"
       response: string
   - log: "Response received: ${response}"
 
