@@ -46,12 +46,6 @@ flows:
         body:
           field1: ${myForm.firstName}
           field2: ${myForm.lastName}
-  - call: mysubflow
-    
-  
-  mysubflow:
-  - script: example.py
-  - log: "The result: ${y}"
 
 forms:
   myForm:
