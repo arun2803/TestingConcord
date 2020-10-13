@@ -20,8 +20,12 @@ flows:
       e: ${myForm.skills}
   - task: http
     in:
-      method: GET
-      url: http://ifconfig.io/
+      auth:
+        basic:
+          username: arusing
+          password: 113977a563a3ae08a57da646c77a0eef17
+      method: POST
+      url: https://eda-ci.adobe.net/job/test/buildWithParameters
       response: string
   - log: "Response received: ${response}"
 
